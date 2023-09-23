@@ -1,0 +1,31 @@
+name: Каждые 15 минут
+
+on:
+  schedule:
+    - cron: "*/5 * * * *"
+
+jobs:
+  scrape_proxies:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout репозитория
+        uses: actions/checkout@v2
+
+      - name: Установка Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: 3.9
+
+      - name: Установка модуля requests
+        run: pip install requests
+
+      - name: Запуск scrapeProxy.py
+        run: python scrapeProxy.py
+
+      - name: Обновление proxy.txt
+        run: |
+          echo "новое содержимое" > proxy.txt
+          git add proxy.txt
+          git commit -m "Обновление файла proxy.txt"
+          git push
