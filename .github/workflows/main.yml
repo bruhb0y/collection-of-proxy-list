@@ -25,7 +25,7 @@ jobs:
 
       - name: Set Git user
         run: |
-          git config user.email "mehhmehhmehh@yandex.ru"
+          git config user.email "bruh.boy0@yandex.ru"
           git config user.name "bruhb0y"
 
       - name: Update proxy.txt commit message
