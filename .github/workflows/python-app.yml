@@ -1,0 +1,30 @@
+name: Half-hourly Proxy Scraping
+
+on:
+  schedule:
+    - cron: "*/30 * * * *"
+
+jobs:
+  scrape_proxies:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Set up Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: 3.x
+
+      - name: Install requests module
+        run: pip install requests
+
+      - name: Run scrapeProxy.txt
+        run: python scrapeProxy.txt
+
+      - name: Update proxy.txt commit message
+        run: |
+          git add proxy.txt
+          git commit -m "hi chat"
+          git push
