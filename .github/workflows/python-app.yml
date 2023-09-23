@@ -22,9 +22,3 @@ jobs:
 
       - name: Run scrapeProxy.py
         run: python scrapeProxy.py
-
-      - name: Update proxy.txt commit message
-        run: |
-          git add proxy.txt
-          git commit -m "hi chat"
-          git push
