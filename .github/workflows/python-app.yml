@@ -20,8 +20,8 @@ jobs:
       - name: Install requests module
         run: pip install requests
 
-      - name: Run scrapeProxy.txt
-        run: python scrapeProxy.txt
+      - name: Run scrapeProxy.py
+        run: python scrapeProxy.py
 
       - name: Update proxy.txt commit message
         run: |
