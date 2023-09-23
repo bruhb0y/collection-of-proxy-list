@@ -1,24 +1,24 @@
-name: Half-hourly Proxy Scraping
-
-on:
-  schedule:
-    - cron: "*/1 * * * *"
-
-jobs:
-  scrape_proxies:
-    runs-on: ubuntu-latest
-
-    steps:
-      - name: Checkout repository
-        uses: actions/checkout@v2
-
-      - name: Set up Python
-        uses: actions/setup-python@v2
-        with:
-          python-version: 3.9
-
-      - name: Install requests module
-        run: pip install requests
-
-      - name: Run scrapeProxy.py
-        run: python scrapeProxy.py
+  name: Half-hourly Proxy Scraping
+  
+  on:
+    schedule:
+      - cron: "*/1 * * * *"
+  
+  jobs:
+    scrape_proxies:
+      runs-on: ubuntu-latest
+  
+      steps:
+        - name: Checkout repository
+          uses: actions/checkout@v2
+  
+        - name: Set up Python
+          uses: actions/setup-python@v2
+          with:
+            python-version: 3.9
+  
+        - name: Install requests module
+          run: pip install requests
+  
+        - name: Run scrapeProxy.py
+          run: python scrapeProxy.py
