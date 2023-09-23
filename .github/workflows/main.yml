@@ -26,6 +26,8 @@ jobs:
       - name: Обновление proxy.txt
         run: |
           echo "новое содержимое" > proxy.txt
+          git config --global user.email "mehhmehhmehh@yandex.ru"
+          git config --global user.name "bruhb0y"
           git add proxy.txt
           git commit -m "Обновление файла proxy.txt"
           git push
