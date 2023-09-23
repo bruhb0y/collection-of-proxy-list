@@ -22,3 +22,4 @@ https://raw.githubusercontent.com/fahimscirex/proxybd/master/proxylist/http.txt
 https://raw.githubusercontent.com/TheSpeedX/PROXY-List/master/http.txt
 https://raw.githubusercontent.com/andigwandi/free-proxy/main/proxy_list.txt
 https://raw.githubusercontent.com/officialputuid/KangProxy/KangProxy/http/http.txt
+https://pastebin.com/raw/kEcVE10f
