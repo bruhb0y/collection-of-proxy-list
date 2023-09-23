@@ -1,33 +1,36 @@
-name: Каждые 15 минут
+name: Half-hourly Proxy Scraping
 
 on:
   schedule:
-    - cron: "*/5 * * * *"
+    - cron: "*/30 * * * *"
 
 jobs:
   scrape_proxies:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout репозитория
+      - name: Checkout repository
         uses: actions/checkout@v2
 
-      - name: Установка Python
+      - name: Set up Python
         uses: actions/setup-python@v2
         with:
-          python-version: 3.9
+          python-version: 3.x
 
-      - name: Установка модуля requests
+      - name: Install requests module
         run: pip install requests
 
-      - name: Запуск scrapeProxy.py
+      - name: Run scrapeProxy.py
         run: python scrapeProxy.py
 
-      - name: Обновление proxy.txt
+      - name: Set Git user
+        run: |
+          git config user.email "you@example.com"
+          git config user.name "Your Name"
+
+      - name: Update proxy.txt commit message
         run: |
           echo "новое содержимое" > proxy.txt
-          git config --global user.email "mehhmehhmehh@yandex.ru"
-          git config --global user.name "bruhb0y"
           git add proxy.txt
-          git commit -m "Обновление файла proxy.txt"
+          git commit -m "hi chat"
           git push
