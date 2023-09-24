@@ -22,15 +22,3 @@ jobs:
 
       - name: Run scrapeProxy.py
         run: python scrapeProxy.py
-
-      - name: Set Git user
-        run: |
-          git config user.email "bruh.boy0@yandex.ru"
-          git config user.name "bruhb0y"
-
-      - name: Update proxy.txt commit message
-        run: |
-          echo "новое содержимое" > proxy.txt
-          git add proxy.txt
-          git commit -m "hi chat"
-          git push
