@@ -22,7 +22,7 @@ jobs:
         run: pip install requests
 
       - name: Запуск Python скрипта
-        run: python path/to/your/script.py
+        run: python scrapeProxy.py
 
       - name: Обновление файла http_proxy.txt
         run: |
