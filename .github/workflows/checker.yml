@@ -3,6 +3,12 @@ name: Half-hourly Proxy Scraping
 on:
   schedule:
     - cron: "*/1 * * * *"
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
 
 jobs:
   scrape_proxies:
