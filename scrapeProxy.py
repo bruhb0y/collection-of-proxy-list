@@ -14,7 +14,7 @@ def scrapeProxy():
         amount = 0
         for link in links:
             response = requests.get(link)
-            if response.ok:
+            if requests.ok:
                 proxys.append(response.text)
                 lines = len(response.text.split("\n"))
                 print(f"[ + ] {lines} lines appeared in http_proxy.txt")
@@ -22,6 +22,7 @@ def scrapeProxy():
     with open("http_proxy.txt", "a") as file:
         for proxy in proxys:
             file.write(proxy)
+    file.truncate()
 
     print(f"[ ! ] Finished with {amount} proxies from {lamount} in proxy.txt!")
 scrapeProxy()
