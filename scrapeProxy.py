@@ -24,5 +24,5 @@ def scrapeProxy():
             file.write(proxy)
     file.truncate()
 
-    print(f"[ ! ] Finished with {amount} proxies from {lamount} in proxy.txt!")
+    print(f"[ ! ] Finished with {amount} proxies from {lamount} in proxy.txt! hi chat")
 scrapeProxy()
