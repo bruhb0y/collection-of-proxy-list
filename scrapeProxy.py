@@ -9,7 +9,7 @@ def scrapeProxy():
     lamount = len(links)
     print(f"[ ! ] Successfully loaded {lamount} links with HTTP/HTTP's proxy.")
 
-   with open("http_proxy.txt", 'a') as file:
+    with open("http_proxy.txt", 'a') as file:
         amount = 0
         for link in links:
             response = requests.get(link)
